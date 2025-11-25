@@ -1,0 +1,223 @@
+/* =========================================================
+   EXTENT ULTRA ENTERPRISE THEME
+   Author: Ziad Mohamed
+   Style: Executive Dark / Corporate
+========================================================= */
+
+/* Tokens */
+:root{
+  --primary:#6D28D9;
+  --primary-2:#7C3AED;
+  --accent:#22D3EE;
+
+  --success:#16A34A;
+  --danger:#DC2626;
+  --warning:#D97706;
+  --info:#0EA5E9;
+
+  --bg:#070B16;
+  --bg-glow-1:#182043;
+  --bg-glow-2:#0B2942;
+
+  --panel:#0F172A;
+  --panel-2:#111B33;
+  --panel-3:#0B1224;
+
+  --text:#E5E7EB;
+  --text-soft:#9AA4B2;
+  --muted:#6B7280;
+
+  --border:#1F2A44;
+  --border-soft:#273555;
+
+  --radius:16px;
+}
+
+/* Base background */
+html, body, .layout{
+  background:
+    radial-gradient(1200px circle at 0% -10%, var(--bg-glow-1) 0%, transparent 55%),
+    radial-gradient(900px circle at 110% 0%, var(--bg-glow-2) 0%, transparent 50%),
+    linear-gradient(180deg, var(--bg) 0%, #05070F 100%) !important;
+
+  color:var(--text)!important;
+  font-family:"Inter","Segoe UI",system-ui,-apple-system,Arial,sans-serif!important;
+  letter-spacing:.2px;
+}
+
+/* Header */
+.header{
+  background:rgba(15,23,42,.92)!important;
+  backdrop-filter: blur(12px);
+  border-bottom:1px solid var(--border)!important;
+  box-shadow:0 12px 40px rgba(0,0,0,.6);
+}
+.header .title{
+  font-weight:900!important;
+  font-size:18px!important;
+  letter-spacing:1px;
+  color:#fff!important;
+}
+.header .timestamp{
+  color:var(--text-soft)!important;
+  font-weight:700!important;
+}
+
+/* Left nav */
+.side-nav{
+  background:rgba(17,24,39,.96)!important;
+  border-right:1px solid var(--border)!important;
+}
+.side-nav a{
+  color:var(--text-soft)!important;
+  font-weight:800!important;
+  font-size:13px;
+  border-left:3px solid transparent;
+  transition:.2s ease;
+}
+.side-nav a:hover{
+  color:#fff!important;
+  background:linear-gradient(90deg, rgba(109,40,217,.25), transparent)!important;
+}
+.side-nav a.active{
+  color:#fff!important;
+  background:linear-gradient(90deg, rgba(109,40,217,.40), transparent)!important;
+  border-left-color:var(--primary)!important;
+}
+
+/* KPI cards */
+.card, .dashboard-view .card{
+  background:linear-gradient(180deg, var(--panel) 0%, #0A1020 100%)!important;
+  border:1px solid var(--border-soft)!important;
+  border-radius:var(--radius)!important;
+  box-shadow:
+      0 12px 30px rgba(0,0,0,.6),
+      inset 0 0 0 1px rgba(255,255,255,.02);
+  transition:.25s ease;
+}
+.card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(109,40,217,.7)!important;
+  box-shadow:
+      0 16px 36px rgba(0,0,0,.7),
+      0 0 0 1px rgba(109,40,217,.25);
+}
+.card .card-title{
+  color:var(--text-soft)!important;
+  font-weight:900!important;
+  letter-spacing:.6px;
+  font-size:12px!important;
+  text-transform:uppercase;
+}
+
+/* Big numbers */
+.card h2, .card h3, .big-number{
+  font-weight:900!important;
+  letter-spacing:.6px!important;
+}
+
+/* Status pills */
+.badge, .btn, .status{
+  border-radius:999px!important;
+  font-weight:900!important;
+  letter-spacing:.35px!important;
+}
+.badge-success, .text-success, .status-pass{
+  color:var(--success)!important;
+  background:rgba(22,163,74,.14)!important;
+  border:1px solid rgba(22,163,74,.25)!important;
+}
+.badge-danger, .text-danger, .status-fail{
+  color:var(--danger)!important;
+  background:rgba(220,38,38,.14)!important;
+  border:1px solid rgba(220,38,38,.25)!important;
+}
+.badge-warning, .text-warning, .status-skip{
+  color:var(--warning)!important;
+  background:rgba(217,119,6,.14)!important;
+  border:1px solid rgba(217,119,6,.25)!important;
+}
+.badge-info, .text-info{
+  color:var(--info)!important;
+  background:rgba(14,165,233,.14)!important;
+  border:1px solid rgba(14,165,233,.25)!important;
+}
+
+/* Tabs */
+.nav-tabs{
+  background:rgba(14,22,43,.96)!important;
+  border:1px solid var(--border)!important;
+  padding:6px!important;
+  border-radius:12px!important;
+}
+.nav-tabs .nav-link{
+  color:var(--text-soft)!important;
+  font-weight:900!important;
+  border-radius:10px!important;
+  padding:8px 12px!important;
+}
+.nav-tabs .nav-link.active{
+  color:#fff!important;
+  background:linear-gradient(90deg, var(--primary), #4C1D95)!important;
+  box-shadow:0 8px 20px rgba(109,40,217,.55);
+}
+
+/* Tables */
+.table, table{
+  background:var(--panel-2)!important;
+  border-radius:14px!important;
+  overflow:hidden!important;
+  border:1px solid var(--border)!important;
+}
+.table th, table th{
+  background:rgba(31,41,55,.9)!important;
+  color:#fff!important;
+  font-weight:900!important;
+  font-size:12px!important;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+  border-bottom:1px solid var(--border)!important;
+}
+.table td, table td{
+  color:var(--text)!important;
+  border-color:var(--border)!important;
+  font-size:13px!important;
+}
+.table tr:hover td{
+  background:rgba(109,40,217,.08)!important;
+}
+
+/* Test list styling */
+.test-item{
+  border-bottom:1px dashed var(--border)!important;
+}
+.test-item:hover{
+  background:rgba(255,255,255,.03)!important;
+}
+.test-item .test-name{
+  font-weight:900!important;
+}
+
+/* Inputs */
+input, select, textarea{
+  background:var(--panel-3)!important;
+  color:var(--text)!important;
+  border:1px solid var(--border)!important;
+  border-radius:10px!important;
+}
+
+/* Links */
+a{
+  color:#A78BFA!important;
+  font-weight:800!important;
+  text-decoration:none!important;
+}
+a:hover{ color:#C4B5FD!important; }
+
+/* Scrollbar */
+::-webkit-scrollbar{ width:10px; height:10px; }
+::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg, #2A3758, #111827);
+  border-radius:999px;
+}
+::-webkit-scrollbar-track{ background:transparent; }
